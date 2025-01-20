@@ -17,13 +17,51 @@
 <body>
   <div id="app">
     <main>
-      <div class="main-container">    
+      <div class="main-container">
         <div class="back">
           <img src="assets/icons/arrow-left-02.svg" alt="">
           <span>voltar</span>
         </div>
         <h1>Formulário de matrícula</h1>
         <p>Preencha os dados abaixo para matricular seu filho na escola de educação infantil Estrelas do Amanhã.</p>
+
+        <form method="post" enctype="multipart/form-data">
+          <fieldset class="child-info">
+            <legend>Informações da criança</legend>
+
+            <div class="input-wrapper">
+              <label for="fullname">Nome completo</label>
+              <input name="fullname" id="fullname" type="text" placeholder="Qual o nome da criança">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="data-nascimento">Data de nascimento</label>
+              <input name="data-nascimento" id="data-nascimento" type="date" </div>
+
+              <div class="select-wrapper">
+                <label for="gender">Sexo</label>
+                <select name="gender" id="gender">
+                  <option value="masculino">Masculino</option>
+                  <option value="feminino">Feminino</option>
+                  <option value="na">Prefiro não dizer</option>
+                </select>
+              </div>
+
+              <div class="textarea-wrapper">
+                <label for="info-medica">Informações médicas</label>
+                <textarea name="info-medica" id="info-medica" cols="30" rows="10" placeholder="A criança possui alguma condição médica que a escola deve estar ciente?"></textarea>
+              </div>
+
+              <div class="droparea-wrapper">
+                <label for="certidao">Certidão de nascimento</label>
+                <input type="file" id="certidao-nascimento" name="certidao-nascimento">
+                <img src="assets/icons/cloud-upload.svg" alt="">
+                <p>Clique aqui para <br> 
+                  selecionar arquivos</p>
+              </div>
+
+          </fieldset>
+        </form>
       </div>
     </main>
 
